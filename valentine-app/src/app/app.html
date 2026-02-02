@@ -1,0 +1,45 @@
+<div class="full-page">
+    <mat-card class="center-card">
+      <div class="important-question" *ngIf="showQuestion">
+        <div class="lenny-pic">
+          <img src="assets/images/lenny.png" />
+        </div>
+        <mat-card-content>
+          <p class="question-text">Alicia will you be my valentine?</p>
+          <div
+            class="button-area"
+            #arena
+            (pointermove)="onArenaMove($event)"
+            (mousemove)="onArenaMove($event)"
+            (touchmove)="onArenaMove($event)"
+          >
+            <button #yesBtn class="yes-btn" matButton="elevated" (click)="onYes()">Yes</button>
+  
+            <!-- The “No” button is positioned absolutely so we can move it -->
+            <button
+              #noBtn
+              class="no-btn"
+              mat-raised-button
+              color="warn"
+              (mouseenter)="onNoHover()"
+              (pointerenter)="onNoHover()"
+              (pointerdown)="$event.preventDefault()"
+              (click)="$event.preventDefault(); $event.stopPropagation()"
+              aria-disabled="true"
+              tabindex="-1"
+            >
+              No
+            </button>
+          </div>
+        </mat-card-content>
+      </div>
+      <div class="yes-screen" *ngIf="!showQuestion">
+        <mat-card-content>
+          <img class="yes-gif" src="assets/gifs/excited.gif" alt="Excited" />
+          <p class="yes-message">Happy Valentines Day</p>
+          <div class="flower-row" aria-hidden="true">🎉</div>
+          
+        </mat-card-content>
+      </div>
+    </mat-card>
+</div>

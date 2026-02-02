@@ -1,0 +1,125 @@
+
+.full-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 178, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+  .center-card {
+    width: 70vw;
+    height: 70vh;
+    max-width: 700px;  
+    max-height: 900px;
+  }
+
+  .lenny-pic {
+    height: 35%;
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    overflow: hidden;         
+  }
+
+  .lenny-pic img {
+    max-height: 100%;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .important-question {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .yes-screen {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .yes-gif {
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .yes-message {
+    margin: 12px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #b0005c;
+  }
+
+  .flower-row {
+    margin-top: 14px;
+    font-size: 96px;
+    line-height: 1.2;
+    letter-spacing: 4px;
+  }
+
+
+
+  mat-card-content {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .question-text {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #b0005c;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+
+  .button-area {
+    margin-top: auto;        /* pushes it to the bottom */
+    width: 100%;
+    height: 120px;           /* space for No to dodge */
+    position: relative;      /* containing block for absolute No */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    padding-bottom: 8px;
+  }
+
+  .no-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    touch-action: none; /* helps on mobile */
+    transition: left 140ms ease-out, top 140ms ease-out, transform 140ms ease-out;
+  }
+
+  .yes-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    touch-action: none;
+  }
+
+  .yes-btn,
+  .no-btn {
+    transform-origin: center;
+  }

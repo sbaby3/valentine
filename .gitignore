@@ -1,0 +1,32 @@
+# Angular / build outputs (any workspace level)
+**/dist/
+**/out-tsc/
+**/tmp/
+**/coverage/
+**/e2e/test-output/
+**/.angular/
+**/.ng/
+
+# Dependencies
+**/node_modules/
+yarn.lock
+
+# Environment files
+**/.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Angular CLI legacy
+.angular-cli.json
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
